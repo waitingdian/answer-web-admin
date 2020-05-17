@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <Topbar></Topbar>
+    <Aside class="pull-left"></Aside>
+    <router-view style="margin-left: 201px;"/>
   </div>
 </template>
 
 <script>
+import Topbar from '@/components/Topbar'
+import Aside from '@/components/Aside'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Topbar,
+    Aside
+  }
 }
 </script>
 
@@ -16,8 +23,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
